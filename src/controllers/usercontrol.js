@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt')
 
 /* ------------------------------ */
 
-const Event = require("../models/eventmodel");
+// const Event = require("../models/eventmodel");
 const User = require("../models/usermodel");
 
 /* ------------------------------ */
@@ -46,3 +46,34 @@ exports.getNewUser = async (req, res) => {
     });
   }
 };
+
+exports.getLogIn = async (req, res) => {
+  try {
+    const { email, password } = req.body
+    if(!email || !password) {
+      return res.status(400).json({ message: "Veuillez fournir un email et un mot de passe." })
+    }
+    
+    const user = await User.findOne({ email }).select("+password");
+
+    if (!user) {
+      return res.status(401).json({ message: "L'email ou le mot de passe est incorrect." });
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(401).json({ message: "L'email ou le mot de passe est incorrect." });
+    }
+
+    res.status(201).json({
+      status: 'sucess',
+      mssg: 'You are logged in '
+  })
+  } catch (err) {
+    console.error("Erreur lors de la création du user :", err);
+     return res.status(500).json({
+      message: "Erreur lors de la création du user",
+      error: err.message,
+    });
+  }
+}

@@ -3,8 +3,11 @@ const router = express.Router();
 
 /* ------------------------------ */
 
-const Event = require("../models/eventmodel");
-const { getEventPage, getEventDetail } = require("../controllers/eventcontrol");
+// const Event = require("../models/eventmodel");
+// const { getEventPage, getEventDetail } = require("../controllers/eventcontrol");
+
+const User = require("../models/usermodel")
+const { getNewUser, getLogIn } = require('../controllers/usercontrol')
 
 /* ------------------------------ */
 
@@ -26,14 +29,18 @@ router.get("/project", async (req, res) => {
 router.get("/project/:id")
 
 // pour la page d'Evenement
-router.get("/evenement", getEventPage);
+router.get("/evenement");
 
-router.get("/evenement/:id", getEventDetail)
+router.get("/evenement/:id")
 
 // pour le page de log-in / sign-up
-router.get("/", async (req, res) => {
-  res.render("index");
+router.get("/log&sign", async (req, res) => {
+  res.render("log&sign");
 });
+
+router.post("/register", getNewUser)
+
+router.post("/login", getLogIn)
 
 // exporation des routes
 module.exports = router;
