@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+
+    background-image: url("../img/bgevent.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #141414;
+}
+
+/* Haut de tête */
+header {
+    display: flex;
+    justify-content: center;
+
+    width: 55%;
+
+    margin: 15px auto;
+    padding: 10px;
+
+    border: white solid 2px;
+    border-radius: 25px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+header img {
+    width: 75px;
+    height: auto;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+/* Contenue */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.e {
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border: 3px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+/* pied de page */
+footer {
+    display: flex;
+    justify-content: center;
+
+    color: white;
+
+    border: white solid 2px;
+    border-radius: 25px;
+
+    width: 25%;
+
+    margin: 15px auto;
+    padding: 10px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+   
+}

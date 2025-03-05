@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM HAXX</title>
+    <link rel="stylesheet" href="css/event.css">
+</head>
+<body>
+    <header> <%- include('../partials/navbar') %> </header>
+    <main>
+        <% events.forEach(function(event) {%>
+            <%- include('../partials/eventlist', { event }) %>
+        <% }); %> 
+    </main>
+    <footer> <%- include('../partials/footers') %> </footer>
+</body>

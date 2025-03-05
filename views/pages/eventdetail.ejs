@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM HAXX</title>
+    <link rel="stylesheet" href="css/event.css">
+</head>
+<body>
+    <header> <%- include('../partials/navbar') %> </header>
+    <main>
+        <div class="e">
+            <a href="./evenement/<%= event.id %>"><img src="<%= event.image %>" alt="<%= event.nom %>" /></a>
+            <div class="card">
+              <h2><%= event.nom %></h2>
+              <p><%= event.date %></p>
+              <p><%= event.places_disponibles %></p>
+              <p><%= event.description %></p>
+              <p><%= event.ville %></p>
+            </div>
+        </div>
+    </main>
+    <footer> <%- include('../partials/footers') %> </footer>
+</body>

@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: whitesmoke;
+
+    background-image: url("../img/bgmembre.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #141414;
+}
+
+/* Haut de tête */
+header {
+    display: flex;
+    justify-content: center;
+
+    width: 55%;
+
+    margin: 15px auto;
+    padding: 10px;
+
+    border: white solid 2px;
+    border-radius: 25px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+header img {
+    width: 75px;
+    height: auto;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+/* Contenue */
+
+
+
+
+/* pied de page */
+footer {
+    display: flex;
+    justify-content: center;
+
+    color: white;
+
+    border: white solid 2px;
+    border-radius: 25px;
+
+    width: 25%;
+
+    margin: 15px auto;
+    padding: 10px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+   
+}
