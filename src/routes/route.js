@@ -3,8 +3,8 @@ const router = express.Router();
 
 /* ------------------------------ */
 
-// const Event = require("../models/eventmodel");
-// const { getEventPage, getEventDetail } = require("../controllers/eventcontrol");
+const Event = require("../models/eventmodel");
+const { getViewsEvent } = require("../controllers/eventcontrol");
 
 const User = require("../models/usermodel")
 const { getNewUser, getLogIn } = require('../controllers/usercontrol')
@@ -29,7 +29,7 @@ router.get("/project", async (req, res) => {
 router.get("/project/:id")
 
 // pour la page d'Evenement
-router.get("/evenement");
+router.get("/evenement", getViewsEvent);
 
 router.get("/evenement/:id")
 

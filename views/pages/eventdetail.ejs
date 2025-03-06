@@ -10,11 +10,11 @@
     <header> <%- include('../partials/navbar') %> </header>
     <main>
         <div class="e">
-            <a href="./evenement/<%= event.id %>"><img src="<%= event.image %>" alt="<%= event.nom %>" /></a>
+            <a href="./evenement/<%= event.id %>"><img src="<%= event.image %>" alt="<%= event.title %>" /></a>
             <div class="card">
               <h2><%= event.nom %></h2>
               <p><%= event.date %></p>
-              <p><%= event.places_disponibles %></p>
+              <p><%= event.places_available %></p>
               <p><%= event.description %></p>
               <p><%= event.ville %></p>
             </div>
